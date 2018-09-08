@@ -1,0 +1,26 @@
+.menu {
+ ion-card {
+     position: relative;
+     text-align: center;
+     margin: 0 !important;
+     width: 100% !important;
+ }
+
+ .card {
+     &__title {
+         position: absolute;
+         font-size: 2em;
+         font-weight: bold;
+         top: 5%;
+         left: 20vw;
+     }
+
+     &__subtitle {
+         position: absolute;
+         font-size: 1.2em;
+         font-weight: bold;
+         top: 20%;
+         left: 20vw;
+     }
+ }
+}

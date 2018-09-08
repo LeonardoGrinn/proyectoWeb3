@@ -1,0 +1,22 @@
+page-home {
+    
+    /*.card-md.carrusel {
+         margin: 0px !important;
+         border-radius: 0px !important;
+         width: 100% !important;
+    } checar luego */ 
+    
+
+    ion-slide {
+        width: 100% !important;
+
+        img {
+           width: 100vw !important;
+        }
+    }
+
+   h1.title-list {
+        font-size: 1.5em;
+   }
+}
+

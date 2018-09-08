@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-buttons start>
+      <!-- Posicionar boton a la izquierda -->
+      <button ion-button menuToggle>
+        <ion-icon color="danger" name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>INICIO</ion-title>
+  </ion-navbar>
+
+  <!-- <ion-toolbar color="danger">
+    <ion-searchbar [(ngModel)]="searchQuery" (search)="onSearch($event)"></ion-searchbar>
+  </ion-toolbar> -->
+</ion-header>
+
+<!-- Slider -->
+<ion-content no-padding>
+  <ion-card ngClass="carrusel">
+    <!-- Contenedor de Carrusel-->
+    <ion-slides loop="true" autoplay="3000" pager>
+      <!-- Carrusel de imagenes && modo autoplay activado -->
+      <ion-slide *ngFor="let number of [1,2,3,4]">
+        <!-- Creamos ciclo For con los 4 valores-->
+        <img src="./assets/imgs/carrusel/{{number}}.jpg" />
+        <!-- Generamos URL a partir de los valores del ciclo For-->
+      </ion-slide>
+
+    </ion-slides>
+    <!-- ./Carusel -->
+  </ion-card>
+  <!-- ./Contenedor de Carrusel-->
+
+  <img ngClass="banner" src="./assets/imgs/banner2.jpg" />
+
+  <!-- Tarjeta de productos -->
+  <ion-grid>
+    <ion-row>
+      <ion-slides #productSlides>
+        <ion-slide *ngFor="let product of products">
+          <!--Obtener producto del array de Productos, uno a la vez -->
+          <ion-card no-padding>
+            <!-- Eliminamos el Padding de las tarjetas -->
+            <img [src]="product.featured_src" />
+            <!-- Binded SRC para convertirlo en la ruta de la imagen-->
+            <h1 padding center> {{ product.title }} </h1>
+            <!-- Título del producto -->
+            <p center padding [innerHTML]="product.short_description"></p>
+            <!-- Descripción del producto -->
+
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+  </ion-grid>
+
+  <!--Mostrar productos-->
+  <ion-list>
+    <ion-item *ngFor="let product of moreProducts" text-wrap (click)="openProductPage(product)">
+      <ion-thumbnail item-left>
+        <!--Encerrar imagen de producto en un thumbnail y lo alineamos a la izquierda-->
+        <img [src]="product.featured_src" />
+        <!-- Imagen del producto -->
+      </ion-thumbnail>
+
+      <h2> {{ product.title }} </h2>
+      <!-- Título del producto -->
+
+      <p>
+        <span [innerHTML]="product.short_description.substr(0, 50) + '...'"></span>
+        <!-- Descripción del producto limitada a 0-50 caracteres -->
+        <span [innerHTML]="product.price_html"></span>
+        <!-- Precio del producto -->
+      </p>
+
+      <button ion-button icon clear item-right>
+        <ion-icon name="arrow-dropright"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Cargar más productos -->
+  <ion-infinite-scroll (ionInfinite)="loadMoreProducts($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

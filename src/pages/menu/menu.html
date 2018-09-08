@@ -1,0 +1,25 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-title>MENU PEPON</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content ngClass="menu">
+    <ion-card> 
+      <img src="./assets/imgs/menu.jpg" alt="menu-cover">
+      <div class="card__title">Animalditos</div>
+      <div class="card__subtitle">¡Compralos todos!</div>
+    </ion-card>
+
+    <ion-list>
+      <ion-item *ngFor="let category of categories" text-wrap (click)="openCategoryPage(category)" menuClose> <!--menuClose cierra nav automatico.-->
+        <h2>{{ category.name }}</h2>
+        <p>{{category.description}}</p>
+      </ion-item>  
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav #content [root] = "homePage"></ion-nav>

@@ -1,6 +1,6 @@
-webpackJsonp([1],{
+webpackJsonp([0],{
 
-/***/ 191:
+/***/ 192:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,46 +13,38 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 191;
+webpackEmptyAsyncContext.id = 192;
 
 /***/ }),
 
-/***/ 232:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 233:
+/***/ (function(module, exports) {
 
-var map = {
-	"../pages/products-details/products-details.module": [
-		627,
-		0
-	]
-};
-function webpackAsyncContext(req) {
-	var ids = map[req];
-	if(!ids)
-		return Promise.reject(new Error("Cannot find module '" + req + "'."));
-	return __webpack_require__.e(ids[1]).then(function() {
-		return __webpack_require__(ids[0]);
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
 	});
-};
-webpackAsyncContext.keys = function webpackAsyncContextKeys() {
-	return Object.keys(map);
-};
-webpackAsyncContext.id = 232;
-module.exports = webpackAsyncContext;
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 233;
 
 /***/ }),
 
-/***/ 276:
+/***/ 277:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(277);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_woocommerce_api__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_woocommerce_api__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_woocommerce_api___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_woocommerce_api__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__products_by_category_products_by_category__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__products_by_category_products_by_category__ = __webpack_require__(347);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -111,7 +103,7 @@ var MenuPage = /** @class */ (function () {
     ], MenuPage.prototype, "childNavCtrl", void 0);
     MenuPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-menu',template:/*ion-inline-start:"/Users/LeoSolutio/Documents/GitHub/proyectoWeb3/src/pages/menu/menu.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar color="dark">\n      <ion-title>MENU PEPON</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content ngClass="menu">\n    <ion-card> \n      <img src="./assets/imgs/menu.jpg" alt="menu-cover">\n      <div class="card__title">Animalditos</div>\n      <div class="card__subtitle">¡Compralos todos!</div>\n    </ion-card>\n\n    <ion-list>\n      <ion-item *ngFor="let category of categories" text-wrap (click)="openCategoryPage(category)" menuClose> <!--menuClose cierra nav automatico.-->\n        <h2>{{ category.name }}</h2>\n        <p>{{category.description}}</p>\n      </ion-item>  \n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<ion-nav #content [root] = "homePage"></ion-nav>\n'/*ion-inline-end:"/Users/LeoSolutio/Documents/GitHub/proyectoWeb3/src/pages/menu/menu.html"*/,
+            selector: 'page-menu',template:/*ion-inline-start:"/Users/LeoSolutio/Documents/GitHub/proyectoWeb3/src/pages/menu/menu.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar color="dark">\n      <ion-title>MENU PEPON</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content ngClass="menu">\n    <!-- Imagen & título -->\n    <ion-card> \n      <img src="./assets/imgs/menu.jpg" alt="menu-cover">\n      <div class="card__title">Animalditos</div>\n      <div class="card__subtitle">¡Compralos todos!</div>\n    </ion-card>\n\n    <!-- Lista de categorias -->\n    <ion-list>\n      <ion-item *ngFor="let category of categories" text-wrap (click)="openCategoryPage(category)" menuClose> <!--menuClose cierra nav automatico.-->\n        <h2>{{ category.name }}</h2>\n        <p>{{category.description}}</p>\n      </ion-item>  \n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<ion-nav #content [root] = "homePage"></ion-nav>\n'/*ion-inline-end:"/Users/LeoSolutio/Documents/GitHub/proyectoWeb3/src/pages/menu/menu.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], MenuPage);
@@ -122,15 +114,16 @@ var MenuPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 277:
+/***/ 278:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_woocommerce_api__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_woocommerce_api___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_woocommerce_api__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__products_details_products_details__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_woocommerce_api__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_woocommerce_api___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_woocommerce_api__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -140,9 +133,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
- //ViewChild nos permite accesar a elementos hijo de nuestra página. 
+ //ViewChild nos permite accesar a elementos hijo de nuestra página.
 
- //Importamos la API de Woocommerce. 
+
+ //Importamos la API de Woocommerce.
 var HomePage = /** @class */ (function () {
     function HomePage(navCtrl, toastCtrl) {
         var _this = this;
@@ -150,7 +144,7 @@ var HomePage = /** @class */ (function () {
         this.toastCtrl = toastCtrl;
         this.page = 2; //Tomar los productos de la segunda página. 
         //Inicializamos WooCommerce
-        this.WooCommerce = __WEBPACK_IMPORTED_MODULE_2_woocommerce_api__({
+        this.WooCommerce = __WEBPACK_IMPORTED_MODULE_3_woocommerce_api__({
             url: "http://escueladehector.000webhostapp.com/",
             consumerKey: "ck_4a4fa92e1961a050cf9b93110cb615c0cb05db03",
             consumerSecret: "cs_00cd74a4fc231fc29d788f1d54fa971bc58cbf95"
@@ -167,22 +161,21 @@ var HomePage = /** @class */ (function () {
         var _this = this;
         //Auto Product Slider. 
         setInterval(function () {
-            if (_this.productSlides.getActiveIndex() == _this.productSlides.length() - 1) {
+            if (_this.productSlides.getActiveIndex() == _this.productSlides.length() - 1)
                 _this.productSlides.slideTo(0);
-            }
             _this.productSlides.slideNext();
         }, 3000);
     };
     HomePage.prototype.loadMoreProducts = function (event) {
         var _this = this;
+        console.log(event);
         //Checar si event es igual a Null para cargar contenido desde el constructor
         if (event == null) {
             this.page = 2;
             this.moreProducts = [];
         }
-        else {
+        else
             this.page++;
-        }
         this.WooCommerce.getAsync("products?page" + this.page).then(function (data) {
             console.log(JSON.parse(data.body));
             _this.moreProducts = _this.moreProducts.concat(JSON.parse(data.body).products); //Insertar nuevo productos a los antiguos productos.
@@ -192,10 +185,10 @@ var HomePage = /** @class */ (function () {
             }
             //Checamos si tenemos menos de 10 productos publicados en la tienda. 
             if (JSON.parse(data.body).products.length < 10) {
-                event.enable(false); //Checar porque no funciona. 
-                //Mostrar mensaje. 
+                event.enable(false);
+                //Mostrar mensaje.
                 _this.toastCtrl.create({
-                    message: "No hay más animalitos, Elvira!",
+                    message: "¡No hay más animalditos Elvira!",
                     duration: 5000
                 }).present();
             }
@@ -203,31 +196,224 @@ var HomePage = /** @class */ (function () {
             console.log(err);
         });
     };
+    //Cargar la página del producto.
+    HomePage.prototype.openProductPage = function (product) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__products_details_products_details__["a" /* ProductsDetailsPage */], { "product": product });
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('productSlides'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Slides */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Slides */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Slides */]) === "function" && _a || Object)
     ], HomePage.prototype, "productSlides", void 0);
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-home',template:/*ion-inline-start:"/Users/LeoSolutio/Documents/GitHub/proyectoWeb3/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color="dark">\n    <ion-buttons start>\n      <!-- Posicionar boton a la izquierda -->\n      <button ion-button menuToggle>\n        <ion-icon color="danger" name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>INICIO</ion-title>\n  </ion-navbar>\n\n  <!-- <ion-toolbar color="danger">\n    <ion-searchbar [(ngModel)]="searchQuery" (search)="onSearch($event)"></ion-searchbar>\n  </ion-toolbar> -->\n</ion-header>\n\n<!-- Slider -->\n<ion-content no-padding>\n  <ion-card ngClass="carrusel">\n    <!-- Contenedor de Carrusel-->\n    <ion-slides loop="true" autoplay="3000" pager>\n      <!-- Carrusel de imagenes && modo autoplay activado -->\n      <ion-slide *ngFor="let number of [1,2,3,4]">\n        <!-- Creamos ciclo For con los 4 valores-->\n        <img src="./assets/imgs/carrusel/{{number}}.jpg" />\n        <!-- Generamos URL a partir de los valores del ciclo For-->\n      </ion-slide>\n\n    </ion-slides>\n    <!-- ./Carusel -->\n  </ion-card>\n  <!-- ./Contenedor de Carrusel-->\n\n  <img ngClass="banner" src="./assets/imgs/banner2.jpg" />\n\n  <!-- Tarjeta de productos -->\n  <ion-grid>\n    <ion-row>\n      <ion-slides #productSlides>\n        <ion-slide *ngFor="let product of products">\n          <!--Obtener producto del array de Productos, uno a la vez -->\n          <ion-card no-padding>\n            <!-- Eliminamos el Padding de las tarjetas -->\n            <img [src]="product.featured_src" />\n            <!-- Binded SRC para convertirlo en la ruta de la imagen-->\n            <h1 padding center> {{ product.title }} </h1>\n            <!-- Título del producto -->\n            <p center padding [innerHTML]="product.short_description"></p>\n            <!-- Descripción del producto -->\n\n          </ion-card>\n        </ion-slide>\n      </ion-slides>\n    </ion-row>\n  </ion-grid>\n\n  <!--Mostrar productos-->\n  <ion-list>\n    <ion-item *ngFor="let product of moreProducts" text-wrap (click)="openProductPage(product)">\n      <ion-thumbnail item-left>\n        <!--Encerrar imagen de producto en un thumbnail y lo alineamos a la izquierda-->\n        <img [src]="product.featured_src" />\n        <!-- Imagen del producto -->\n      </ion-thumbnail>\n\n      <h2> {{ product.title }} </h2>\n      <!-- Título del producto -->\n\n      <p>\n        <span [innerHTML]="product.short_description.substr(0, 50) + \'...\'"></span>\n        <!-- Descripción del producto limitada a 0-50 caracteres -->\n        <span [innerHTML]="product.price_html"></span>\n        <!-- Precio del producto -->\n      </p>\n\n      <button ion-button icon clear item-right>\n        <ion-icon name="arrow-dropright"></ion-icon>\n      </button>\n    </ion-item>\n  </ion-list>\n\n  <!-- Cargar más productos -->\n  <ion-infinite-scroll (ionInfinite)="loadMoreProducts($event)">\n    <ion-infinite-scroll-content></ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n\n</ion-content>\n'/*ion-inline-end:"/Users/LeoSolutio/Documents/GitHub/proyectoWeb3/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]])
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]) === "function" && _c || Object])
     ], HomePage);
     return HomePage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=home.js.map
 
 /***/ }),
 
-/***/ 344:
+/***/ 279:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductsDetailsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_woocommerce_api__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_woocommerce_api___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_woocommerce_api__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__cart_cart__ = __webpack_require__(346);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(183);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+ //Importante para poder almacenar productos en el carrito. 
+var ProductsDetailsPage = /** @class */ (function () {
+    function ProductsDetailsPage(navCtrl, navParams, storage, toastCtrl, modalCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this.modalCtrl = modalCtrl;
+        this.product = this.navParams.get("product");
+        console.log(this.product);
+        //Inicializamos WooCommerce
+        this.WooCommerce = __WEBPACK_IMPORTED_MODULE_2_woocommerce_api__({
+            url: "http://escueladehector.000webhostapp.com/",
+            consumerKey: "ck_4a4fa92e1961a050cf9b93110cb615c0cb05db03",
+            consumerSecret: "cs_00cd74a4fc231fc29d788f1d54fa971bc58cbf95"
+        });
+    }
+    //Añadir productos al carrito. 
+    ProductsDetailsPage.prototype.addToCart = function (product) {
+        var _this = this;
+        this.storage.get("cart").then(function (data) {
+            //Checar si el carrito esta vacio. 
+            if (data == null || data.length == 0) {
+                data = []; //Inicializamos array.
+                //Insertamos productos al array. 
+                data.push({
+                    "product": product,
+                    "qty": 1,
+                    "amount": parseFloat(product.price) //precio
+                });
+            }
+            else {
+                var added = 0;
+                //Revisar todos los productos del carrito. 
+                for (var i = 0; i < data.length; i++) {
+                    //Verificar si el producto que se esta agregando al carrito ya existe. 
+                    if (product.id == data[i].product.id) {
+                        var qty = data[i].qty;
+                        console.log("¡Ya tienes este digimon!");
+                        data[i].qty = qty + 1; //Sumar el producto repedito a la cantidad en el carrito. 
+                        data[i].amount = parseFloat(data[i].amount) + parseFloat(data[i].product.price); //Sumar el costo del nuevo producto al total. 
+                        added = 1;
+                    }
+                }
+                //Verificar si el producto que se esta agregando no existe. 
+                if (added == 0) {
+                    //Insertamos productos al array. 
+                    data.push({
+                        "product": product,
+                        "qty": 1,
+                        "amount": parseFloat(product.price) //precio.
+                    });
+                }
+            }
+            //Actualizar el contenido del carrito.
+            _this.storage.set("cart", data).then(function () {
+                console.log("Todo listo maestro pokemon");
+                console.log(data);
+                _this.toastCtrl.create({
+                    message: "Todo listo maestro pokemon",
+                    duration: 3000
+                }).present();
+            });
+        });
+    };
+    //Abrir modal del carrito de compras. 
+    ProductsDetailsPage.prototype.openCart = function () {
+        this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__cart_cart__["a" /* CartPage */]).present();
+    };
+    ProductsDetailsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-products-details',template:/*ion-inline-start:"/Users/LeoSolutio/Documents/GitHub/proyectoWeb3/src/pages/products-details/products-details.html"*/'<ion-header>\n\n  <ion-navbar color="dark">\n    <ion-title>{{product.title}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <!--Boton para mostrar carrito-->\n  <ion-fab right top edge (click)="openCart()">\n    <button ion-fab color="danger"><ion-icon name="cart"></ion-icon></button>\n  </ion-fab>\n  <!-- Slider -->\n  <ion-card>\n    <ion-slides autoplay="3000">\n      <ion-slide *ngFor="let image of product.images">\n        <img [src]="image.src" alt="imagenes-del-producto">\n      </ion-slide>\n    </ion-slides>\n    <!--Informacion del producto-->\n    <ion-card-content>\n      <ion-card-title> <!-- Titulo -->\n        {{product.title}} &nbsp;\n      </ion-card-title> \n\n      <p [innerHTML]="product.description"></p>  <!-- Descripcion -->\n\n      <!-- Boton para añadir a carrito -->\n      <button ion-button icon-left block color="danger" (click)="addToCart(product)">\n        <ion-icon name="basket"></ion-icon>Añadir a la jaula\n      </button>\n    </ion-card-content>\n  </ion-card>\n\n  <p padding>Con cada animaldito comprado salvas a un Ivan de que le de Nill(bueno no). Empieza las buenas acciones como los ricos lo hacen, gastando tu dinero en cosas que otros no pueden comprar porque son inferiores a ti. \n  <br><br>Compra ahora y recibe un certificado de maestro pokemón y de paso uno de diseñador grafico.</p>\n  \n</ion-content>\n'/*ion-inline-end:"/Users/LeoSolutio/Documents/GitHub/proyectoWeb3/src/pages/products-details/products-details.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* ModalController */]])
+    ], ProductsDetailsPage);
+    return ProductsDetailsPage;
+}());
+
+//# sourceMappingURL=products-details.js.map
+
+/***/ }),
+
+/***/ 346:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CartPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(183);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var CartPage = /** @class */ (function () {
+    function CartPage(navCtrl, navParams, storage, viewCtrl) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.storage = storage;
+        this.viewCtrl = viewCtrl;
+        //Variables
+        this.cartItems = []; //Productos contenidos en el carrito.
+        this.showEmptyCartMessage = false; //Mensaje de carrito vacio. 
+        this.total = 0.0; //Almacernar el total. 
+        this.storage.ready().then(function () {
+            _this.storage.get("cart").then(function (data) {
+                _this.cartItems = data;
+                console.log(_this.cartItems);
+                //Verificar si el carrito contiene productos. 
+                if (_this.cartItems.length > 0) {
+                    //Calcular total. 
+                    _this.cartItems.forEach(function (item, index) {
+                        _this.total = _this.total + (item.product.price * item.qty);
+                    });
+                }
+                else {
+                    //Mostar mensaje en caso de estar vacio.
+                    _this.showEmptyCartMessage = true;
+                }
+            });
+        });
+    }
+    /* Eliminar productos del carrito */
+    CartPage.prototype.removeFromCart = function (item, i) {
+        var _this = this;
+        var price = item.product.price; //Obtener producto.
+        var qty = item.qty; //Obtener cantidad. 
+        this.cartItems.splice(i, 1); //i = index. 
+        //Acutalizar contenido del carrito. 
+        this.storage.set("cart", this.cartItems).then(function () {
+            _this.total = _this.total - (price * qty); //Eliminar precio y cantidad. 
+        });
+        //Verificar si el carrito esta vacio. 
+        if (this.cartItems.length == 0) {
+            this.showEmptyCartMessage = true;
+        }
+    };
+    /* cerrar ventana */
+    CartPage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
+    };
+    CartPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-cart',template:/*ion-inline-start:"/Users/LeoSolutio/Documents/GitHub/proyectoWeb3/src/pages/cart/cart.html"*/'<!--\n  Generated template for the CartPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header color="dark">\n\n  <ion-navbar color="dark">\n    <ion-title>MI JAULA</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <ion-card color="danger" style="text-align:center;">\n    <ion-grid>\n      <ion-row>\n        <ion-col>Animalditos Enjaulados</ion-col>\n      </ion-row>\n      <ion-row [hidden]="!showEmptyCartMessage"> <!--Checar valor bool -->\n        <ion-col>!Compra perro!</ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-card>\n\n  <!-- Listado de productos en el carrito-->\n  <ion-list>\n    <ion-item *ngFor="let item of cartItems; let i = index"> <!--i = index-->\n\n      <ion-thumbnail item-left>\n        <img [src]="item.product.featured_src" style="width: 60px !important; height: 60px !important;" />\n      </ion-thumbnail>\n      <h2>{{ item.product.title }}</h2> <!--Titulo del producto-->\n      <p>{{ item.qty }} • {{ item.product.price }}</p><!--Costo del producto-->\n      <button ion-button clear item-right color="danger" (click)="removeFromCart(item, i)">\n        <ion-icon name="close-circle"></ion-icon>\n      </button>\n\n    </ion-item>\n  </ion-list>\n\n  <!--Total de tu compra-->\n  <ion-grid>\n    <ion-card color="dark">\n      <ion-grid>\n        <ion-row>\n          <ion-col col-2> \n\n          </ion-col>\n          <ion-col col-4>\n            <b>TOTAL</b>\n          </ion-col>\n          <ion-col col-3>\n\n          </ion-col>\n          <ion-col col-3 style="text-align: right">\n            <b> {{ total }} </b>\n          </ion-col>\n\n\n        </ion-row>\n      </ion-grid>\n    </ion-card>\n  </ion-grid>\n\n</ion-content>\n\n<!--Menu del carrito-->\n<ion-footer>\n  <ion-toolbar color="dark">\n    <ion-grid>\n      <ion-row>\n        <ion-col>\n          <button ion-button color="light" outline block (click)="closeModal()">Volver</button>\n        </ion-col>\n        <ion-col>\n          <button ion-button color="danger" block (click)="checkout()">Pagar</button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/Users/LeoSolutio/Documents/GitHub/proyectoWeb3/src/pages/cart/cart.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */]) === "function" && _d || Object])
+    ], CartPage);
+    return CartPage;
+    var _a, _b, _c, _d;
+}());
+
+//# sourceMappingURL=cart.js.map
+
+/***/ }),
+
+/***/ 347:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductsByCategoryPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_woocommerce_api__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_woocommerce_api__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_woocommerce_api___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_woocommerce_api__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -247,7 +433,7 @@ var ProductsByCategoryPage = /** @class */ (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.page = 1;
-        this.category = this.navParams.get('category');
+        this.category = this.navParams.get("category");
         //Inicializamos WooCommerce
         this.WooCommerce = __WEBPACK_IMPORTED_MODULE_2_woocommerce_api__({
             url: "http://escueladehector.000webhostapp.com/",
@@ -263,14 +449,14 @@ var ProductsByCategoryPage = /** @class */ (function () {
         });
     }
     ProductsByCategoryPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ProductsByCategoryPage');
+        console.log('ionViewDidLoad ProductsByCategory');
     };
     //Cargar más productos.
     ProductsByCategoryPage.prototype.loadMoreProducts = function (event) {
         var _this = this;
         this.page++;
         console.log("Getting page " + this.page);
-        //Filtramos los productos en base a la categoria seleccionada. 
+        //Filtramos los productos en base a la categoria seleccionada.
         this.WooCommerce.getAsync("products?filter[category]=" + this.category.slug + "&page=" + this.page).then(function (data) {
             var temp = (JSON.parse(data.body).products);
             _this.products = _this.products.concat(JSON.parse(data.body).products);
@@ -282,25 +468,24 @@ var ProductsByCategoryPage = /** @class */ (function () {
     };
     ProductsByCategoryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-products-by-category',template:/*ion-inline-start:"/Users/LeoSolutio/Documents/GitHub/proyectoWeb3/src/pages/products-by-category/products-by-category.html"*/'<!--\n  Generated template for the ProductsByCategoryPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-buttons start>\n      <!-- Posicionar boton a la izquierda -->\n      <button color="danger" ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>Animalditos seleccionados</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-list>\n    <ion-item *ngFor="let product of products" text-wrap (click)="openProductPage(product)">\n      <ion-thumbnail item-left>\n        <!--Encerrar imagen de producto en un thumbnail y lo alineamos a la izquierda-->\n        <img [src]="product.featured_src" />\n        <!-- Imagen del producto -->\n      </ion-thumbnail>\n\n      <h2> {{ product.title }} </h2>\n      <!-- Título del producto -->\n\n      <p>\n        <span [innerHTML]="product.short_description.substr(0, 50) + \'...\'"></span>\n        <!-- Descripción del producto limitada a 0-50 caracteres -->\n        <span [innerHTML]="product.price_html"></span>\n        <!-- Precio del producto -->\n      </p>\n\n      <button ion-button icon clear item-right>\n        <ion-icon name="arrow-dropright"></ion-icon>\n      </button>\n    </ion-item>\n  </ion-list>\n\n  <!-- Cargar más productos -->\n  <ion-infinite-scroll (ionInfinite)="loadMoreProducts($event)">\n    <ion-infinite-scroll-content></ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n</ion-content>\n'/*ion-inline-end:"/Users/LeoSolutio/Documents/GitHub/proyectoWeb3/src/pages/products-by-category/products-by-category.html"*/,
+            selector: 'page-products-by-category',template:/*ion-inline-start:"/Users/LeoSolutio/Documents/GitHub/proyectoWeb3/src/pages/products-by-category/products-by-category.html"*/'<!--\n  Generated template for the ProductsByCategoryPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="dark">\n    <ion-buttons start>\n      <!-- Posicionar boton a la izquierda -->\n      <button color="danger" ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>Animalditos seleccionados</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-list>\n    <ion-item *ngFor="let product of products" text-wrap (click)="openProductPage(product)">\n      <ion-thumbnail item-left>\n        <!--Encerrar imagen de producto en un thumbnail y lo alineamos a la izquierda-->\n        <img [src]="product.featured_src" />\n        <!-- Imagen del producto -->\n      </ion-thumbnail>\n\n      <h2> {{ product.title }} </h2>\n      <!-- Título del producto -->\n\n      <p>\n        <span [innerHTML]="product.short_description.substr(0, 50) + \'...\'"></span>\n        <!-- Descripción del producto limitada a 0-50 caracteres -->\n        <span [innerHTML]="product.price_html"></span>\n        <!-- Precio del producto -->\n      </p>\n\n      <button ion-button icon clear item-right>\n        <ion-icon name="arrow-dropright"></ion-icon>\n      </button>\n    </ion-item>\n  </ion-list>\n\n  <!-- Cargar más productos -->\n  <ion-infinite-scroll (ionInfinite)="loadMoreProducts($event)">\n    <ion-infinite-scroll-content></ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n</ion-content>\n'/*ion-inline-end:"/Users/LeoSolutio/Documents/GitHub/proyectoWeb3/src/pages/products-by-category/products-by-category.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], ProductsByCategoryPage);
     return ProductsByCategoryPage;
-    var _a, _b;
 }());
 
 //# sourceMappingURL=products-by-category.js.map
 
 /***/ }),
 
-/***/ 345:
+/***/ 348:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(346);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(368);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(371);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -308,26 +493,32 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 368:
+/***/ 371:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(411);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(277);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_menu_menu__ = __webpack_require__(276);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_products_by_category_products_by_category__ = __webpack_require__(344);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(272);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(414);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_menu_menu__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_products_by_category_products_by_category__ = __webpack_require__(347);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_products_details_products_details__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_cart_cart__ = __webpack_require__(346);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_storage__ = __webpack_require__(183);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -346,26 +537,29 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */],
                 __WEBPACK_IMPORTED_MODULE_5__pages_menu_menu__["a" /* MenuPage */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_products_by_category_products_by_category__["a" /* ProductsByCategoryPage */]
+                __WEBPACK_IMPORTED_MODULE_6__pages_products_by_category_products_by_category__["a" /* ProductsByCategoryPage */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_products_details_products_details__["a" /* ProductsDetailsPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_cart_cart__["a" /* CartPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
-                    links: [
-                        { loadChildren: '../pages/products-details/products-details.module#ProductsDetailsPageModule', name: 'ProductsDetailsPage', segment: 'products-details', priority: 'low', defaultHistory: [] }
-                    ]
+                    links: []
                 }),
+                __WEBPACK_IMPORTED_MODULE_11__ionic_storage__["a" /* IonicStorageModule */].forRoot()
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */],
                 __WEBPACK_IMPORTED_MODULE_5__pages_menu_menu__["a" /* MenuPage */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_products_by_category_products_by_category__["a" /* ProductsByCategoryPage */]
+                __WEBPACK_IMPORTED_MODULE_6__pages_products_by_category_products_by_category__["a" /* ProductsByCategoryPage */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_products_details_products_details__["a" /* ProductsDetailsPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_cart_cart__["a" /* CartPage */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__["a" /* SplashScreen */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
             ]
         })
@@ -377,16 +571,16 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 411:
+/***/ 414:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(272);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(275);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_menu_menu__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_menu_menu__ = __webpack_require__(277);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -434,40 +628,40 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 433:
+/***/ 436:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 435:
+/***/ 438:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 467:
+/***/ 470:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 468:
+/***/ 471:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 536:
+/***/ 539:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ })
 
-},[345]);
+},[348]);
 //# sourceMappingURL=main.js.map

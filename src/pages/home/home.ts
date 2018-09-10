@@ -57,8 +57,9 @@ export class HomePage {
       this.page = 2;
       this.moreProducts = [];
     }
-    else
+    else {
       this.page++;
+    }
 
     this.WooCommerce.getAsync("products?page" + this.page).then((data) => {
       console.log(JSON.parse(data.body));

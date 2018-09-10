@@ -33,7 +33,26 @@
 
   <img ngClass="banner" src="./assets/imgs/banner2.jpg" />
 
-  
+  <!-- Tarjeta de productos 
+  <ion-grid>
+    <ion-row>
+      <ion-slides #productSlides>
+        <ion-slide *ngFor="let product of products">
+          <!--Obtener producto del array de Productos, uno a la vez 
+          <ion-card no-padding>
+            <!-- Eliminamos el Padding de las tarjetas 
+            <img [src]="product.featured_src" />
+            <!-- Binded SRC para convertirlo en la ruta de la imagen
+            <h1 padding center> {{ product.title }} </h1>
+            <!-- Título del producto 
+            <p center padding [innerHTML]="product.short_description"></p>
+            <!-- Descripción del producto 
+
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+  </ion-grid> -->
 
   <!--Mostrar productos-->
   <ion-list>

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, ViewController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
-
 @Component({
   selector: 'page-cart',
   templateUrl: 'cart.html',
@@ -18,7 +17,7 @@ export class CartPage {
 
     this.total = 0.0; //Almacernar el total. 
 
-    this.storage.ready().then(() => { //Ejecutar la funcion solo cuando el storage se ha cargado. 
+    this.storage.ready().then(() => { //Ejecutar la funcion solo cuando el storage se ha cargado.
 
       this.storage.get("cart").then((data) => {
         this.cartItems = data;
@@ -27,12 +26,13 @@ export class CartPage {
         //Verificar si el carrito contiene productos. 
         if (this.cartItems.length > 0) {
 
-          //Calcular total. 
+          //Calcular total.
           this.cartItems.forEach((item, index) => {
             this.total = this.total + (item.product.price * item.qty)
-          })
+          }) //Checar porque no se borra la cantidad. 
 
         } else {
+
           //Mostar mensaje en caso de estar vacio.
           this.showEmptyCartMessage = true;
 
@@ -53,7 +53,7 @@ export class CartPage {
 
     this.cartItems.splice(i, 1); //i = index. 
 
-    //Acutalizar contenido del carrito. 
+    //Acutalizar contenido del carrito.
     this.storage.set("cart", this.cartItems).then(() => {
 
       this.total = this.total - (price * qty); //Eliminar precio y cantidad. 
@@ -67,9 +67,10 @@ export class CartPage {
 
 
   }
+
   /* cerrar ventana */
   closeModal() {
     this.viewCtrl.dismiss();
-  }
+  } 
 
 }

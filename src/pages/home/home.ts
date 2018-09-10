@@ -39,7 +39,7 @@ export class HomePage {
 
   }
 
-  ionViewDidLoad() {
+  /*ionViewDidLoad() {
 
     //Auto Product Slider. 
     setInterval(() => {//Permite ejecutar un fragmento de código repetidamente despues de un periodo.
@@ -48,7 +48,7 @@ export class HomePage {
 
       this.productSlides.slideNext();
     }, 3000)
-  }
+  } */
 
   loadMoreProducts(event) {
     console.log(event);

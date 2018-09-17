@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, ViewController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
+//Importamos pagina de Checkout
+import { CheckoutPage } from '../checkout/checkout';
+
 @Component({
   selector: 'page-cart',
   templateUrl: 'cart.html',
@@ -73,4 +76,8 @@ export class CartPage {
     this.viewCtrl.dismiss();
   } 
 
+  /* Checkout */
+  checkout(){
+    this.navCtrl.push(CheckoutPage);
+  }
 }

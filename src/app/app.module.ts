@@ -9,6 +9,8 @@ import { ProductsByCategoryPage } from '../pages/products-by-category/products-b
 import { ProductsDetailsPage } from '../pages/products-details/products-details';
 import { CartPage } from '../pages/cart/cart';
 import { SignupPage } from '../pages/signup/signup';
+import { CheckoutPage } from '../pages/checkout/checkout';
+import { SuccespaymentPage } from '../pages/succespayment/succespayment';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,7 +25,9 @@ import { IonicStorageModule } from '@ionic/storage';
     ProductsByCategoryPage,
     ProductsDetailsPage,
     CartPage,
-    SignupPage
+    SignupPage,
+    CheckoutPage,
+    SuccespaymentPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,9 @@ import { IonicStorageModule } from '@ionic/storage';
     ProductsByCategoryPage,
     ProductsDetailsPage,
     CartPage,
-    SignupPage
+    SignupPage,
+    CheckoutPage,
+    SuccespaymentPage
   ],
   providers: [
     StatusBar,

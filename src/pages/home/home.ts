@@ -73,7 +73,7 @@ export class HomePage {
       //Checamos si tenemos menos de 10 productos publicados en la tienda. 
       if (JSON.parse(data.body).products.length < 10) {
         
-        event.enable(false);
+        if(event) event.enable(false);
 
         //Mostrar mensaje.
         this.toastCtrl.create({

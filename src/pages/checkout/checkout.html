@@ -1,0 +1,90 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Eres un Señor Burgues</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item-divider color="danger">Datos de miRey</ion-item-divider>
+        <ion-item>
+          <ion-label>Nombre burgues</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Apellido Burgues</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Correo de iCloud</ion-label>
+          <ion-input readonly type="email" ></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Como te dice el Pablito</ion-label>
+          <ion-input readonly type="text"></ion-input>
+        </ion-item>
+  
+        <ion-item-divider color="danger">Datos Pa cobrarte</ion-item-divider>
+  
+        <ion-item>
+          <ion-label>Direccion 1</ion-label>
+          <ion-textarea type="text" maxlength="80" ></ion-textarea>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Direccion 2</ion-label>
+          <ion-textarea type="text" maxlength="80" ></ion-textarea>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Pais</ion-label>
+          <ion-select>
+            <ion-option value="GDL" selected="true">Guadalajara(porque Guadalajara es el mundo)</ion-option>
+          </ion-select>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Estado</ion-label>
+          <ion-select >
+            <ion-option value="GDL2">Guadalajara</ion-option>
+            <ion-option value="DGO">Durango(El universo)</ion-option>
+          </ion-select>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Ciudad</ion-label>
+          <ion-input type="text" ></ion-input>        
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Codigo Postal</ion-label>
+          <ion-input type="number" clearInput ></ion-input>        
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>iPhone</ion-label>
+          <ion-input type="tel" clearInput></ion-input>        
+        </ion-item>
+  
+        <ion-item>
+            <ion-label>Metodo de pago de Papis</ion-label>
+            <ion-select >
+              <ion-option value="IST">Subo tu foto a mi instagram porque soy influencer</ion-option>
+              <ion-option value="MRS">Mando a Ramon en la Suburban</ion-option>
+              <ion-option value="CBW">Ps con la Black wey...</ion-option>
+            </ion-select>
+          </ion-item>
+  
+      </ion-list>
+
+</ion-content>
+
+<ion-footer>
+    <button ion-button block color="danger" (click)="placeOrder()">Que se arme la machaca</button>
+  </ion-footer>
